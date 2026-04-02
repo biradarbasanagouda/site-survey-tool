@@ -1,0 +1,42 @@
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Spring Boot
+*.log
+logs/
+spring.log
+
+# Node / Frontend
+node_modules/
+dist/
+.vite/
+*.local
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Docker
+docker/mysql_data/
+docker/minio_data/
+
+# Secrets
+*.env
+.env.*
+!.env.example
+application-local.yml
+
+# Test output
+*.xml
+surefire-reports/

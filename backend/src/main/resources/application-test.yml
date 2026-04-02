@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+  flyway:
+    enabled: false   # use DDL auto for tests
+
+jwt:
+  secret: test-super-secret-jwt-key-minimum-256-bits-long-string-for-testing
+  access-token-expiry: 900000
+  refresh-token-expiry: 604800000
+
+minio:
+  endpoint: http://localhost:9000
+  access-key: minioadmin
+  secret-key: minioadmin123
+  bucket-name: test-bucket
+
+logging:
+  level:
+    com.isp.sitesurvey: WARN
+    org.springframework.security: WARN
